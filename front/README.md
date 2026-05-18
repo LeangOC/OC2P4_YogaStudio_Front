@@ -51,7 +51,11 @@ Report is available here:
 Launching test:
 
 > npm run test
+<img width="401" height="107" alt="image" src="https://github.com/user-attachments/assets/f993d6e4-aac9-4b34-aeb3-914f70898555" />
+
+
 
 for following change:
 
-> npm run test:watch
+> npm run test:watch  
+<img width="611" height="433" alt="image" src="https://github.com/user-attachments/assets/28f23e0e-6517-4f1b-aa48-a183fa1b728f" />
