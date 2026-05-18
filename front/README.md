@@ -8,6 +8,9 @@ Git clone:
 
 > git clone https://github.com/OpenClassrooms-Student-Center/P5-Full-Stack-testing
 
+
+# dev1  < main
+
 Go inside folder:
 
 > cd yoga
