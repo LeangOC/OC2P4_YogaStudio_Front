@@ -43,6 +43,8 @@ Generate coverage report (you should launch e2e test before):
 Report is available here:
 
 > front/coverage/lcov-report/index.html
+<img width="1349" height="759" alt="image" src="https://github.com/user-attachments/assets/732642c1-6cf6-43a6-b342-702a463991ed" />
+
 
 #### Unitary test
 
