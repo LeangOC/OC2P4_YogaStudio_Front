@@ -62,10 +62,10 @@ for following change:
 
 # dev2 : 
 Les bonnes pratiques telles que :
-- le désabonnement des observables (unsubscribe observables) ;
+- le désabonnement des observables (unsubscribe observables) :  
    Refactor : MeComponent,DetailComponent,FormComponent,LoginComponent et RegisterComponent
 
 # dev3 :
 Les bonnes pratiques telles que :
-- Corriger tous les any
+- Corriger tous les any :  
   Refactor : session-api.service.ts, user.service.ts
