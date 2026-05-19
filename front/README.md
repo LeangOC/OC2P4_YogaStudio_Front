@@ -62,5 +62,5 @@ for following change:
 
 # dev2 : 
 Les bonnes pratiques telles que :
-- le désabonnement des observables (unsubscribe observables) ;
-   Refactor : MeComponent,DetailComponent,FormComponent,LoginComponent et RegisterComponent
+- le désabonnement des observables (unsubscribe observables) :  
+  Refactor : MeComponent,DetailComponent,FormComponent,LoginComponent et RegisterComponent
