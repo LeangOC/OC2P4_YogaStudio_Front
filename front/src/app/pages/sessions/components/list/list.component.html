@@ -8,7 +8,9 @@
       </button>
     </mat-card-header>
     <div class="items mt2" fxLayout="row wrap" fxLayout.lt-md="column">
-      <mat-card class="item" *ngFor="let session of (sessions$ | async)" fxFlex>
+      @for (session of (sessions$ | async); track session.id) {
+        <mat-card class="item">
+
         <mat-card-header>
           <mat-card-title>{{ session.name }}</mat-card-title>
           <mat-card-subtitle>
@@ -34,7 +36,7 @@
             <span class="ml1">Edit</span>
           </button>
         </mat-card-actions>
-      </mat-card>
+      </mat-card>}
     </div>
   </mat-card>
 </div>

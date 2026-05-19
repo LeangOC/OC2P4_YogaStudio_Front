@@ -64,8 +64,13 @@ for following change:
 Les bonnes pratiques telles que :
 - le désabonnement des observables (unsubscribe observables) ;
    Refactor : MeComponent,DetailComponent,FormComponent,LoginComponent et RegisterComponent
+-Typer explicitement toutes les méthodes: DetailComponent
 
 # dev3 :
 Les bonnes pratiques telles que :
 - Corriger tous les any
   Refactor : session-api.service.ts, user.service.ts
+
+# dev4 :
+- Supprimez des directives structurelles obsolètes *ngIf et *ngFor.
+  login.component.html, list.component.html,form.component.html,app.component.html
