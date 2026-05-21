@@ -104,6 +104,9 @@ Après correction :
 ![dev4_Jest_1_Apres.png](assets/dev4_Jest_1_Apres.png)  
 
 # dev4_Jest_2
+warning Setup-jest :  
+![dev4_Jest_2_Warning.png](assets/dev4_Jest_2_Warning.png)  
+
 Suppression des warning :     
 - En remplaçant  "import 'jest-preset-angular/setup-jest';"   
 dans setup-jest.ts :  
