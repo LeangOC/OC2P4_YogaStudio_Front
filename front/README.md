@@ -74,3 +74,31 @@ Les bonnes pratiques telles que :
 # dev4 :  
 - Supprimez des directives structurelles obsolètes *ngIf et *ngFor :  
   Refactor : login.component.html, list.component.html,form.component.html,app.component.html  
+
+# dev4_Jest_1
+Avant correction avec "npm run test"
+![dev4_Jest_1_Avant.png](assets/dev4_Jest_1_Avant.png)
+
+
+Correction :
+
+- list.component.spec.ts :
+il manque : import { provideRouter } from '@angular/router';
+ providers: [{ provide: SessionService, useValue: mockSessionService },provideRouter([])]
+
+- Le reste des composants : 
+supprimer "declarations: [LoginComponent],"
+Ajouter : "imports: [ LoginComponent,...ReactiveFormsModule]"
+
+refactor :
+modified:   src/app/app.component.spec.ts
+modified:   src/app/components/me/me.component.spec.ts
+modified:   src/app/pages/login/login.component.spec.ts
+modified:   src/app/pages/not-found/not-found.component.spec.ts
+modified:   src/app/pages/register/register.component.spec.ts
+modified:   src/app/pages/sessions/components/detail/detail.component.spec.ts
+modified:   src/app/pages/sessions/components/form/form.component.spec.ts
+modified:   src/app/pages/sessions/components/list/list.component.spec.ts
+
+Après correction : 
+![dev4_Jest_1_Apres.png](assets/dev4_Jest_1_Apres.png)
