@@ -102,3 +102,11 @@ modified:   src/app/pages/sessions/components/list/list.component.spec.ts
 
 Après correction :   
 ![dev4_Jest_1_Apres.png](assets/dev4_Jest_1_Apres.png)  
+
+# dev4_Jest_2
+Suppression des warning :     
+- En remplaçant  "import 'jest-preset-angular/setup-jest';"   
+dans setup-jest.ts :  
+- Par import { setupZoneTestEnv } from 'jest-preset-angular/setup-env/zone';  
+  setupZoneTestEnv();  
+![dev4_Jest_2_No_Warning.png](assets/dev4_Jest_2_No_Warning.png)
