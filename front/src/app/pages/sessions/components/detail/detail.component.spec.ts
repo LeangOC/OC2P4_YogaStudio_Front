@@ -16,50 +16,87 @@ describe('DetailComponent', () => {
 
   let sessionApiService: SessionApiService;
 
+  let router: Router;
+
+  let matSnackBar: MatSnackBar;
+
   const mockSession = {
+
     id: 1,
+
     name: 'Yoga Session',
+
     description: 'Test description',
+
     date: new Date(),
+
     teacher_id: 1,
+
     users: [1],
+
     createdAt: new Date(),
+
     updatedAt: new Date()
   };
 
   const mockTeacher = {
+
     id: 1,
+
     firstName: 'John',
+
     lastName: 'Doe',
+
     createdAt: new Date(),
+
     updatedAt: new Date()
   };
 
   beforeEach(async () => {
 
     const sessionServiceMock = {
+
       sessionInformation: {
+
         admin: true,
+
         id: 1
       }
     };
 
     const sessionApiServiceMock = {
-      detail: jest.fn().mockReturnValue(of(mockSession)),
-      delete: jest.fn().mockReturnValue(of(void 0)),
-      participate: jest.fn().mockReturnValue(of(void 0)),
-      unParticipate: jest.fn().mockReturnValue(of(void 0))
+
+      detail: jest.fn().mockReturnValue(
+        of(mockSession)
+      ),
+
+      delete: jest.fn().mockReturnValue(
+        of(void 0)
+      ),
+
+      participate: jest.fn().mockReturnValue(
+        of(void 0)
+      ),
+
+      unParticipate: jest.fn().mockReturnValue(
+        of(void 0)
+      )
     };
 
     const teacherServiceMock = {
-      detail: jest.fn().mockReturnValue(of(mockTeacher))
+
+      detail: jest.fn().mockReturnValue(
+        of(mockTeacher)
+      )
     };
 
     const routerMock = {
+
       navigate: jest.fn()
     };
 
     const matSnackBarMock = {
+
       open: jest.fn()
     };
 
@@ -97,33 +134,92 @@ describe('DetailComponent', () => {
         {
           provide: ActivatedRoute,
           useValue: {
+
             snapshot: {
+
               paramMap: {
-                get: jest.fn().mockReturnValue('1')
+
+                get: jest.fn()
+                  .mockReturnValue('1')
               }
             }
           }
         }
       ]
     }).compileComponents();
-    fixture = TestBed.createComponent(DetailComponent);
+
+    fixture = TestBed.createComponent(
+      DetailComponent
+    );
+
     component = fixture.componentInstance;
-    sessionApiService = TestBed.inject(SessionApiService);
+
+    sessionApiService =
+      TestBed.inject(SessionApiService);
+
+    router = TestBed.inject(Router);
+
+    matSnackBar = TestBed.inject(MatSnackBar);
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+
+    expect(component)
+      .toBeTruthy();
   });
 
   it('should detect admin user', () => {
-    expect(component.isAdmin).toBeTruthy();
+
+    expect(component.isAdmin)
+      .toBeTruthy();
+  });
+
+  it('should participate to session', () => {
+
+    const fetchSpy = jest.spyOn(
+      component as any,
+      'fetchSession'
+    );
+
+    component.participate();
+
+    expect(sessionApiService.participate)
+      .toHaveBeenCalledWith('1', '1');
+
+    expect(fetchSpy)
+      .toHaveBeenCalled();
+  });
+
+  it('should unParticipate from session', () => {
+
+    const fetchSpy = jest.spyOn(
+      component as any,
+      'fetchSession'
+    );
+
+    component.unParticipate();
+
+    expect(sessionApiService.unParticipate)
+      .toHaveBeenCalledWith('1', '1');
+
+    expect(fetchSpy)
+      .toHaveBeenCalled();
   });
 
 
-  it('should participate to session', () => {
-    component.participate();
-    expect(sessionApiService.participate)
-      .toHaveBeenCalledWith('1', '1');
+
+  it('should go back', () => {
+
+    const backSpy = jest.spyOn(
+      window.history,
+      'back'
+    );
+
+    component.back();
+
+    expect(backSpy)
+      .toHaveBeenCalled();
   });
 });

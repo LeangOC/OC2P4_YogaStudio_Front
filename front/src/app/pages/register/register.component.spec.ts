@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { expect } from '@jest/globals';
 import { AuthService } from '../../core/service/auth.service';
 import { Router } from '@angular/router';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
 import { RegisterComponent } from './register.component';
 
 
@@ -68,5 +68,31 @@ describe('RegisterComponent', () => {
     expect(authService.register).toHaveBeenCalled();
 
     expect(router.navigate).toHaveBeenCalledWith(['/login']);
+  });
+
+  it('should handle register error', () => {
+
+    authService.register.mockReturnValue(
+      throwError(() => new Error('Register failed'))
+    );
+
+    component.form.setValue({
+
+      email: 'john@test.com',
+
+      firstName: 'John',
+
+      lastName: 'Doe',
+
+      password: '123456'
+    });
+
+    component.submit();
+
+    expect(authService.register)
+      .toHaveBeenCalled();
+
+    expect(component.onError)
+      .toBeTruthy();
   });
 });
