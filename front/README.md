@@ -113,3 +113,22 @@ dans setup-jest.ts :
 - Par import { setupZoneTestEnv } from 'jest-preset-angular/setup-env/zone';  
   setupZoneTestEnv();  
 ![dev4_Jest_2_No_Warning.png](assets/dev4_Jest_2_No_Warning.png)
+
+# dev4_jest_3
+Améliorer le taux de couverture de tests Jest
+Taux de couverture de tests avant :  
+![dev4_Jest_3_Taux_Avant.png](assets/dev4_Jest_3_Taux_Avant.png)  
+
+Codes refactorisés ou implémentés :  
+- modified:   src/app/components/me/me.component.spec.ts  
+- modified:   src/app/core/service/auth.service.spec.ts  
+- modified:   src/app/core/service/session-api.service.spec.ts  
+- modified:   src/app/core/service/session.service.spec.ts  
+- modified:   src/app/core/service/teacher.service.spec.ts  
+- modified:   src/app/core/service/user.service.spec.ts  
+- modified:   src/app/pages/login/login.component.spec.ts  
+- modified:   src/app/pages/register/register.component.spec.ts  
+- modified:   src/app/pages/sessions/components/detail/detail.component.spec.ts  
+- modified:   src/app/pages/sessions/components/form/form.component.spec.ts  
+
+![dev4_Jest_3_Taux_Apres.png](assets/dev4_Jest_3_Taux_Apres.png)
