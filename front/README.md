@@ -133,3 +133,8 @@ Codes refactorisés ou implémentés :
 
 Tests Jest 95% de couverture :  
 ![dev4_Jest_3_Taux_Apres.png](assets/dev4_Jest_3_Taux_Apres.png)
+
+
+# dev4_jest_4
+Amélioration la couverture des tests des fonctions :  
+![dev4_jest_4_Fonctions.png](assets/dev4_jest_4_Fonctions.png)  
