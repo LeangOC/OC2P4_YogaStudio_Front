@@ -131,5 +131,5 @@ Codes refactorisés ou implémentés :
 - modified:   src/app/pages/sessions/components/detail/detail.component.spec.ts  
 - modified:   src/app/pages/sessions/components/form/form.component.spec.ts  
 
-Tests Jest 95% de couverture :
+Tests Jest 95% de couverture :  
 ![dev4_Jest_3_Taux_Apres.png](assets/dev4_Jest_3_Taux_Apres.png)
