@@ -138,3 +138,6 @@ Tests Jest 95% de couverture :
 # dev4_jest_4
 Amélioration la couverture des tests des fonctions :  
 ![dev4_jest_4_Fonctions.png](assets/dev4_jest_4_Fonctions.png)  
+
+
+# dev5_Cypress_1 < dev4_jest_4
