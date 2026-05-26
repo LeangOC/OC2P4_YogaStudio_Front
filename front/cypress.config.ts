@@ -4,6 +4,13 @@ export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:4200',
     supportFile: 'cypress/support/e2e.ts',
-    video: false
+    video: false,
+
+    setupNodeEvents(on, config) {
+
+      require('@cypress/code-coverage/task')(on, config)
+
+      return config
+    }
   }
 })
