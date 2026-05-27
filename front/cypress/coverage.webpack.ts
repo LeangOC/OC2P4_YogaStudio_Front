@@ -1,24 +1,20 @@
-module.exports = {
+import * as path from 'path';
+
+export default {
   module: {
     rules: [
       {
-        test: /\.[jt]s$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-typescript'
-            ],
-            plugins: [
-              ['@babel/plugin-proposal-decorators', { legacy: true }],
-              ['@babel/plugin-proposal-class-properties', { loose: true }],
-              'babel-plugin-istanbul'
-            ]
-          }
-        }
-      }
-    ]
-  }
-}
+        test: /\.(js|ts)$/,
+        loader: '@jsdevtools/coverage-istanbul-loader',
+        options: { esModules: true },
+        enforce: 'post',
+        include: path.join(__dirname, '..', 'src'),
+        exclude: [
+          /\.(e2e|spec)\.ts$/,
+          /node_modules/,
+          /(ngfactory|ngstyle)\.js/,
+        ],
+      },
+    ],
+  },
+};
