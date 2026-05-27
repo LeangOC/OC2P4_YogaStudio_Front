@@ -89,7 +89,7 @@
               "buildTarget": "yoga:build:production"
             },
             "development": {
-              "buildTarget": "yoga:build:development",
+              "buildTarget": "yoga:build:de/buvelopment",
               "proxyConfig": "proxy.conf.json"
             }
           },
