@@ -2,12 +2,14 @@
   "extends": "@istanbuljs/nyc-config-typescript",
   "all": true,
   "exclude": [
-    "./coverage/**",
+    "coverage/**",
     "cypress/**",
-    "./dist/**",
+    "dist/**",
     "**/*.spec.ts",
-    "./src/main.ts",
-    "./src/test.ts",
+    "src/main.ts",
+    "src/test.ts",
+    "**/main.ts",
+    "**/polyfills.ts",
     "**/*.conf.js"
   ]
 }

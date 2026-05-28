@@ -28,7 +28,12 @@ describe('Account', () => {
         createdAt: '2026-05-25T00:00:00.000Z',
         updatedAt: '2026-05-25T00:00:00.000Z'
       }
+
     }).as('user')
+
+    cy.intercept('DELETE', '**/api/user/1', {
+      statusCode: 200
+    }).as('deleteUser')
 
     cy.visit('/login')
 
@@ -63,5 +68,31 @@ describe('Account', () => {
     cy.contains('John DOE')
       .should('be.visible')
   })
+  it('should delete user account', () => {
+    cy.get('[routerlink="me"]')
+      .click()
+
+    cy.wait('@user')
+
+    cy.contains('Detail')
+      .click()
+
+    cy.wait('@deleteUser')
+    cy.url()
+      .should('include', '/login')
+  })
+
+it('should navigate back when clicking back button', () => {
+  cy.get('[routerlink="me"]')
+    .click()
+  cy.wait('@user')
+
+  cy.url()
+    .should('include', '/me')
+
+  cy.get('button[mat-icon-button]')
+    .click()
+
+})
 })
 
