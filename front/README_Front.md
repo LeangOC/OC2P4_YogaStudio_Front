@@ -26,8 +26,9 @@ for following change:
 # dev2 : 
 Les bonnes pratiques telles que :
 - le désabonnement des observables (unsubscribe observables) :  
-   Refactor : MeComponent,DetailComponent,FormComponent,LoginComponent et RegisterComponent  
--Typer explicitement toutes les méthodes: DetailComponent
+   - Refactor : MeComponent,DetailComponent,FormComponent,LoginComponent et RegisterComponent  
+  
+- Typer explicitement toutes les méthodes: DetailComponent
 
 # dev3 :
 Les bonnes pratiques telles que :  
@@ -35,11 +36,11 @@ Les bonnes pratiques telles que :
   Refactor : session-api.service.ts, user.service.ts
 
 # dev4 :  
-- Supprimez des directives structurelles obsolètes *ngIf et *ngFor :  
+- Suppression des directives structurelles obsolètes *ngIf et *ngFor :  
   Refactor : login.component.html, list.component.html,form.component.html,app.component.html  
 
 # dev4_Jest_1  
-Avant correction avec "npm run test"  
+Avant correction avec "npm run test" :  
 ![dev4_Jest_1_Avant.png](assets/dev4_Jest_1_Avant.png)  
 
 
@@ -103,4 +104,35 @@ Amélioration la couverture des tests des fonctions :
 ![dev4_jest_4_Fonctions.png](assets/dev4_jest_4_Fonctions.png)  
 
 
-# dev5_Cypress_1 < dev4_jest_4
+# dev5_Cypress_1
+Desinstallation de cypress :
+- $ npm uninstall cypress
+- $ npm install cypress --save-dev 
+- $ npx cypress open
+  => No version of Cypress is installed in:
+  C:\Users\Moi\AppData\Local\Cypress\Cache\15.15.0\Cypress
+- $ npx cypress install 
+
+# dev5_Cypress_2
+Configuration et lancement tests
+
+# dev5_Cypress_3
+Couverture "Coverage"
+- ng run yoga:serve-coverage (lire dans angular.json)
+- npx cypress run
+- npm run e2e:coverage
+
+![dev5_Cypress_3.png](../assets/dev5_Cypress_3.png) 
+
+# dev5_cypress_4
+Amélioration tests coverages :
+- main.ts ( statements= 50% Functions:0%)
+- me.component.ts ( statements= 64% Functions:50%)
+- Exclure main.ts
+  Refactor : 8_Account.cy.ts pour le composant me.component.ts
+  Implementation : 10_UnGuard.cy.ts
+  ![dev5_Cypress_4.png](../assets/dev5_Cypress_4.png)
+
+# solution_front
+- Merge de la branche dev5_cypress_4
+- Ajout le fichier README_Front.md pour la descriptions des branches git.
