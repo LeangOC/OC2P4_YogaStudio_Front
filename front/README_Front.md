@@ -134,5 +134,6 @@ Amélioration tests coverages :
   ![dev5_Cypress_4.png](../assets/dev5_Cypress_4.png)
 
 # solution_front
-- Merge de la branche dev5_cypress_4
 - Ajout le fichier README_Front.md pour la descriptions des branches git.
+
+# main < merge 
