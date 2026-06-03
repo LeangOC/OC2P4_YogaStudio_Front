@@ -122,7 +122,7 @@ Couverture "Coverage"
 - npx cypress run
 - npm run e2e:coverage
 
-![dev5_Cypress_3.png](../assets/dev5_Cypress_3.png) 
+![dev5_Cypress_3.png](assets/dev5_Cypress_3.png) 
 
 # dev5_cypress_4
 Amélioration tests coverages :
@@ -131,7 +131,7 @@ Amélioration tests coverages :
 - Exclure main.ts
   Refactor : 8_Account.cy.ts pour le composant me.component.ts
   Implementation : 10_UnGuard.cy.ts
-  ![dev5_Cypress_4.png](../assets/dev5_Cypress_4.png)
+  ![dev5_Cypress_4.png](assets/dev5_Cypress_4.png)
 
 # solution_front
 - Ajout le fichier README_Front.md pour la descriptions des branches git.
