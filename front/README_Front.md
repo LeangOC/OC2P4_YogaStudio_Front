@@ -131,7 +131,7 @@ Amélioration tests coverages :
 - Exclure main.ts
   Refactor : 8_Account.cy.ts pour le composant me.component.ts
   Implementation : 10_UnGuard.cy.ts
-  ![dev5_Cypress_4.png](../assets/dev5_Cypress_4.png)
+  ![dev5_Cypress_4.png](assets/dev5_Cypress_4.png)
 
 # solution_front
 - Merge de la branche dev5_cypress_4
